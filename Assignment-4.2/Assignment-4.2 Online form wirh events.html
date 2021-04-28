@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Curaj Admission form  with event handlers</title>
+</head>
+<style>
+
+    body
+    {
+        background-color: whitesmoke;
+    }
+    .myDiv 
+    {
+          
+         margin-left: 520px;
+         padding: 5px;
+          display: flex;
+         align-items: center;
+         justify-content: left;
+
+    }
+    
+    .form
+    {
+        margin: 50px;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+.form label{
+    font-size:5vh;
+    margin:1px 1px 1px 1px;
+    font-weight: bold;
+ }
+.form input{
+    width: 40vw;
+    height: 6vh;
+    margin:5px 50px 1px 5px;
+    border: 2px solid springgreen ;
+    border-radius: 10px;
+    font-size: 4vh;
+    padding: 1px 1px 1px 1px;
+    background-image:  linear-gradient(to left, rgb(202, 243, 243),rgb(235, 177, 177));
+   
+}
+
+
+
+.form #Submit{
+    margin-top:5px;
+    background-image:  linear-gradient(to right, rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 5px rgb(100,100,100);
+}
+
+.form #submit:hover{
+    background-image: linear-gradient(to right rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 5px rgb(100,100,100);
+}
+.form #submit:active{
+    background-image: linear-gradient(to right, rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 1px rgb(100,100,100);
+    transform: translateY(4px);
+}
+
+#Address
+{
+    background-image:  linear-gradient(to left, rgb(202, 243, 243),rgb(235, 177, 177));
+   
+}
+
+
+#demo
+{
+    margin-left: 500px;
+}
+
+
+.droptarget 
+{
+    float: left; 
+    width: 100px; 
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 300px;
+    border: 4px solid #aaaaaa;
+    font-size: 20px;
+    background-image:  linear-gradient(to left, rgb(126, 223, 126),rgb(235, 232, 223));
+}
+
+#dem
+{
+    
+    margin-top: 40px;
+    margin-left: 500px;
+}
+#ccp
+{
+    height: 1cm;
+    margin-left: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    background-image:  linear-gradient(to left, rgb(115, 120, 167),rgb(235, 221, 177));
+    
+}
+
+#button
+{
+    height: 50px;
+    margin-left: 240px;
+    font-size: 28px;
+    color: tomato;
+    font-weight: bold;
+    background-color: paleturquoise;
+}
+
+</style>
+
+<script >
+
+    function funconmouseover(x) 
+    {
+        x.style.height = "350px";
+        x.style.width = "350px";
+    }
+
+    function funconmouseout(x) 
+    {
+        x.style.height = "225px";
+        x.style.width = "215px";
+    }
+    
+
+    function funconload()
+    {
+        alert("Page is loaded successfully");
+    }
+    
+    function funconkeydown() 
+    {
+        alert("You pressed a key inside the input field");
+    }
+
+    function funconfocus(x)
+    {
+        x.style.background = "lightgrey";
+
+    }
+    
+    function funconblur() 
+    {
+        var x = document.getElementById("Name");
+        x.value = x.value.toUpperCase();
+    }
+    function funconchange(x)
+    {
+        var y=document.getElementById(x).value
+        document.getElementById(x).value=y.toUpperCase()
+    }   
+
+    function onabortfunc()
+    {
+            alert("Loading aborted");
+    }
+
+    function ValidateEmail(email) 
+    {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+        {
+            return (true)
+        }
+        return (false)
+    }
+    
+    function Validation()
+    {
+        var valid = true;
+        var form = document.forms["Registration"];
+        if(form["Name"].value=="")
+        {
+            alert("Name should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Fathers-name"].value=="")
+        {
+            alert("Mather's should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Mothers-name"].value=="")
+        {
+            alert("Mother's name should not be empty");
+            valid = false;
+            return;
+        }
+        if(isNaN(Date.parse(form["DOB"].value)) )
+        {
+            alert("Date should not be empty");
+            valid = false;
+            return;
+        }
+        if(!ValidateEmail(form["email"].value))
+        {
+            alert("Not a valid Email");
+            valid = false;
+            return;
+        }
+        if(form["State"].value=="")
+        {
+            alert("State should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Nationality"].value=="")
+        {
+            alert("Nationlity should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Gender"].value=="")
+        {
+            alert("Gender should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["Caste"].value=="")
+        {
+            alert("Caste should not be empty");
+            valid = false
+            return ;
+        }
+
+        if(form["pincode"].value=="")
+        {
+            alert("Pincode should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["tongue"].value=="")
+        {
+            alert("Mother Tongue should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["blood"].value=="")
+        {
+            alert("Blood Group should not be empty");
+            valid = false
+            return ;
+        }
+        if(valid)
+        {
+            alert("Registration Succesfull");
+            return;
+        }
+    }
+
+    function funconsubmit() 
+    {
+        alert("The form was submitted successfully");
+    }
+
+    function funcondragstart(event) 
+    {
+        event.dataTransfer.setData("Text", event.target.id);
+    }
+    function funcondrag(event) 
+    {
+        document.getElementById("demo").innerHTML = "Element is being dragged";
+    }
+    function funcondragover(event) 
+    {
+        event.preventDefault();
+    }
+    function funcondrop(event) 
+    {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+        document.getElementById("demo").innerHTML = "Element was dropped";
+    }
+
+    function funconcopy() 
+    {
+        document.getElementById("dem").innerHTML = "You copied text!";
+    }
+    function funconcut() 
+    {
+        document.getElementById("dem").innerHTML = "You cut text!";
+    }
+    function funconpaste() 
+    {
+        document.getElementById("dem").innerHTML = "You pasted text!";
+    }
+
+</script>
+
+<!-- onload event -->
+<body onload="funconload()" >
+    <div class="myDiv">
+
+        <!-- onmouseover and onmouseout events -->
+        <img src="Curaj Logo.png" alt="Curaj" onMouseOver="funconmouseover(this)" onmouseout="funconmouseout(this)" >
+    </div>
+
+    <!-- onabort event -->
+    <img src="Curaj logo.jpeg" onabort="onabortfunc()" >
+
+    <h1 style="margin-left: 310px; font-size: 50px;" >Central University of Rajasthan</h1>
+    <br> <br>
+
+    <!-- ondrop, ondragover, ondragstarts, ondrag, draggable events  -->
+    <div class="droptarget" ondrop="funcondrop(event)" ondragover="funcondragover(event)">
+        <p ondragstart="funcondragstart(event)" ondrag="funcondrag(event)" draggable="true" id="dragtarget">Drag me!</p>
+    </div>      
+    <div class="droptarget" ondrop="funcondrop(event)" ondragover="funcondragover(event)"></div>
+    <br><br><br><br>
+    <p id="demo"></p>
+    <br><br><br>
+    
+    <!-- oncopy, oncut, onpaste events -->
+    <input type="text" oncopy="funconcopy()" value="Kunal (Copy this text)" id="ccp">
+    <input type="text" oncut="funconcut()" value="Kunal (Cut this text)" id="ccp">
+    <input type="text" onpaste="funconpaste()" value="Paste here" size="40" id="ccp">
+
+    <p id="dem"></p>
+
+
+    <br> <br> <br>
+
+    <!-- onclick -->
+    <button onclick="this.innerHTML=Date()" id="button" >Today's Date and Now Time is?</button>
+    <br><br>
+    
+    <p style="font-size: 40px; margin-left: 220px; font-weight: bold; ">Enter your details for Admission Registration in CURAJ </p>    
+    
+
+    <div class="form" style="font-size: 25px; margin-left: 260px; "  >
+        
+        <!-- onsubmit -->
+        <form id= "Registeration" name="Registration" action="#" onsubmit="funconsubmit()"  >
+            <label for="Name">Student Name:</label>
+            <br>
+
+            <!-- onblur -->
+            <input type="text" name="Name" id="Name" onblur="funconblur()" >
+            <br> <br>   
+            <label for="Fathers-name">Father's name: </label>
+            <br>
+
+            <!-- onchange, onfocus -->
+            <input type="text" name="Fathers-name" id="Fathers-name" onchange="funconchange(this.id )" onfocus="funconfocus(this)" >
+            <br> <br>
+            <label for="Mothers-name">Mother's name: </label>
+            <Br>
+            <input type="text" name="Mothers-name" id="Mothers-name" onfocus="funconfocus(this)" >
+            <br><br>
+            <label for="DOB">Date Of Birth: </label>
+            <br>
+            <input type="date" name="DOB" id="DOB">
+            <br> <br>
+            <label for="email">Email:   </label>
+            <br>
+            <input type="email" name="email" id="email">
+            <br> <br>   
+            <label for="State">State:   </label>
+            <br>
+            <input type="text" name="State" id="State">
+            <br> <br>   
+            <label for="Nationality">Nationality:   </label>
+            <br>
+            <input type="text" name="Nationality" id="Nationality">
+            <br> <br>  
+            <br> 
+            
+            <label for="Gender" >Gender: </label>
+             <br>
+            <input type="text" name="Gender" id="Gender" >
+            
+            <br><br>
+            <label for="Caste" >Caste:</label>
+            <br>
+            <input type="text" name="Caste" id="Caste" >
+            
+
+            <br> <br> <br>
+            <label for="Address">Resident Address:   </label>
+            <br>    <br>
+            <textarea rows = "5" cols = 40"" name="Address" id = "Address" style=" width: 40vw; border: 2px solid springgreen; border-radius: 10px; font-size: 3vh; " > </textarea>
+            <br> <br>  <br>
+            <label for="pincode" >Pincode:</lable>
+                <br>
+            <input type="number" name="pincode" id="pincode" >
+
+            <br> <br> <br>
+            <label for="tongue">Mother Tongue:   </label>
+            <br>
+            <input type="text" name="tongue" id="tongue">
+            <br> <br>   
+            <label for="blood">Blood Group:   </label>
+            <br>
+
+            <!-- onkeydown -->
+            <input type="text" name="blood" id="blood" onkeydown="funconkeydown()" >
+            <br> <br>   
+            
+            <input onclick="Validation()" type="Submit" id="Submit">
+        </form>
+    </div>
+
+
+   
+</body>
+
+</html>

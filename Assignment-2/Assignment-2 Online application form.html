@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Curaj Admission form</title>
+</head>
+<style>
+
+    .myDiv 
+    {
+          
+         margin-left: 500px;
+         padding: 5px;
+          display: flex;
+         align-items: center;
+         justify-content: left;
+
+    }
+    
+    .form
+    {
+        margin: 50px;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+.form label{
+    font-size:4vh;
+    margin:1px 1px 1px 1px;
+    font-weight: bold;
+ }
+.form input{
+    width: 40vw;
+    height: 5vh;
+    margin:5px 50px 1px 5px;
+    border: 2px solid springgreen ;
+    border-radius: 10px;
+    font-size: 3vh;
+    padding: 1px 1px 1px 1px;
+   
+}
+
+
+
+.form #submit{
+    margin-top:5px;
+    background-image:  linear-gradient(to right, rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 5px rgb(100,100,100);
+}
+
+.form #submit:hover{
+    background-image: linear-gradient(to right rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 5px rgb(100,100,100);
+}
+.form #submit:active{
+    background-image: linear-gradient(to right, rgb(231, 250, 146),rgb(255, 123, 0));
+    box-shadow: 0 1px rgb(100,100,100);
+    transform: translateY(4px);
+}
+</style>
+
+<script >
+        
+
+    function ValidateEmail(email) 
+    {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+        {
+            return (true)
+        }
+        return (false)
+    }
+    
+    function Validation()
+    {
+        var valid = true;
+        var form = document.forms["Registration"];
+        if(form["Name"].value=="")
+        {
+            alert("Name should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Fathers-name"].value=="")
+        {
+            alert("Mather's should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Mothers-name"].value=="")
+        {
+            alert("Mother's name should not be empty");
+            valid = false;
+            return;
+        }
+        if(isNaN(Date.parse(form["DOB"].value)) )
+        {
+            alert("Date should not be empty");
+            valid = false;
+            return;
+        }
+        if(!ValidateEmail(form["email"].value))
+        {
+            alert("Not a valid Email");
+            valid = false;
+            return;
+        }
+        if(form["State"].value=="")
+        {
+            alert("State should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Nationality"].value=="")
+        {
+            alert("Nationlity should not be empty");
+            valid = false;
+            return;
+        }
+        if(form["Gender"].value=="")
+        {
+            alert("Gender should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["Caste"].value=="")
+        {
+            alert("Caste should not be empty");
+            valid = false
+            return ;
+        }
+
+        if(form["pincode"].value=="")
+        {
+            alert("Pincode should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["tongue"].value=="")
+        {
+            alert("Mother Tongue should not be empty");
+            valid = false
+            return ;
+        }
+        if(form["blood"].value=="")
+        {
+            alert("Blood Group should not be empty");
+            valid = false
+            return ;
+        }
+        if(valid)
+        {
+            alert("Registration Succesfull");
+            return;
+        }
+    }
+
+
+</script>
+
+<body >
+    <div class="myDiv">
+        <img src="https://github.com/thekunaljangid/thekunaljangid.github.io/blob/main/assets/Curaj%20Logo.png?raw=true" alt="Curaj">
+    </div>
+    <h1 style="margin-left: 260px; font-size: 50px;" >Central University of Rajasthan</h1>
+    <br> <br>
+    <p style="font-size: 30px; margin-left: 260px; font-weight: bold; ">Enter your details for Admission Registration in CURAJ </p>    
+    
+
+    <div class="form" style="font-size: 25px; margin-left: 260px; ">
+        <form id= "Registeration" name="Registration" action="#">
+            <label for="Name">Student Name:</label>
+            <br>
+            <input type="text" name="Name" id="Name">
+            <br> <br>   
+            <label for="Fathers-name">Father's name: </label>
+            <br>
+            <input type="text" name="Fathers-name" id="Fathers-name">
+            <br> <br>
+            <label for="Mothers-name">Mother's name: </label>
+            <Br>
+            <input type="text" name="Mothers-name" id="Mothers-name">
+            <br><br>
+            <label for="DOB">Date Of Birth: </label>
+            <br>
+            <input type="date" name="DOB" id="DOB">
+            <br> <br>
+            <label for="email">Email:   </label>
+            <br>
+            <input type="email" name="email" id="email">
+            <br> <br>   
+            <label for="State">State:   </label>
+            <br>
+            <input type="text" name="State" id="State">
+            <br> <br>   
+            <label for="Nationality">Nationality:   </label>
+            <br>
+            <input type="text" name="Nationality" id="Nationality">
+            <br> <br>  
+            <br> 
+            
+            <label for="Gender" >Gender: </label>
+             <br>
+            <input type="text" name="Gender" id="Gender" >
+            
+            <br><br>
+            <label for="Caste" >Caste:</label>
+            <br>
+            <input type="text" name="Caste" id="Caste" >
+            
+
+            <br> <br> <br>
+            <label for="Address">Resident Address:   </label>
+            <br>    <br>
+            <textarea rows = "5" cols = 40"" name="Address" id = "Address" style=" width: 40vw; border: 2px solid springgreen; border-radius: 10px; font-size: 3vh; " > </textarea>
+            <br> <br>  <br>
+            <label for="pincode" >Pincode:</lable>
+                <br>
+            <input type="number" name="pincode" id="pincode" >
+
+            <br> <br> <br>
+            <label for="tongue">Mother Tongue:   </label>
+            <br>
+            <input type="text" name="tongue" id="tongue">
+            <br> <br>   
+            <label for="blood">Blood Group:   </label>
+            <br>
+            <input type="text" name="blood" id="blood">
+            <br> <br>   
+            
+            <input onclick="Validation()" type="Submit" id="Submit">
+        </form>
+    </div>
+
+
+   
+</body>
+
+</html>

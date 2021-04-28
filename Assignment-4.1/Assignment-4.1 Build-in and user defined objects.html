@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+      <title> Objects - User defined & Build-in </title>
+
+      <style>
+
+        body
+        {
+            background-color: paleturquoise;
+        }
+
+        h1
+        {
+            font-size: 100px;
+            font-weight: bolder;
+            font-style: oblique;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2
+        {
+            font-size: 70px;
+            font-weight: bolder;
+            font-style:italic ;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 2cm;
+        }
+
+        p
+        {
+            font-size: 25px;
+            color:indigo;
+        }
+
+        input
+        {
+            font-size: 25px;
+            background-color: rgb(230, 180, 220);
+            color:rgb(124, 89, 13);
+        }
+
+        div
+        {
+            font-size: 50px;
+            margin-top: 5cm;
+            margin-bottom: 1.8cm;
+            margin-left: 50px;
+            font-family:cursive;
+        }
+
+        form
+        {
+            font-size: px;
+        }
+
+        #result
+        {
+            margin-left: 80px;
+            font-size: 50px;
+            width: 100%;
+            background-color:rgb(216, 208, 214);
+        }
+
+        #convo
+        {
+            font-size: 40px ;
+            font-weight: bold;
+            margin-left: 130px;
+            size: 50cm;
+            margin-bottom: 4cm;
+            
+        }
+
+        #user1
+        {
+            margin-top: 50px;
+        }
+
+        h4
+        {
+            font-size: 40px;
+        }
+
+        #zero
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color:rgb(97, 81, 93);
+        }
+
+        #infinity
+        {
+            font-size: 30px;
+
+        }
+
+        #len
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(97, 81, 93);
+        }
+
+        #inputlen
+        {
+            margin-left: 40px;
+            margin-bottom: 50px;
+            font-size: 45px;
+        }
+        #da
+        {
+            font-size: 34px;
+            font-weight: bold;
+            color: rgb(97, 81, 93);
+        }
+        #Date
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(148, 112, 163);
+        }
+
+        #abs
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(148, 112, 163);
+        }
+
+        button
+        {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        #log
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(148, 112, 163);
+        }
+
+        #prompt
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(148, 112, 163);
+        }
+
+      </style>
+  </head>
+
+    <body>
+        <h1>  Javascript Objects</h1>
+
+        <br>
+        <h2> User Defined Objects </h2>
+        <br>
+        <p id="demo"> </p>
+        <br>
+        <p id="demo1"></p>
+        <br>
+        <p id="dem"> </p>
+        <br>
+        <input  type="button" id="dateobj" value="Date object" onclick="funcdate()" />
+        <p id="date"> </p> 
+
+
+
+        <div> <b> Converter (USD to Indian Rupee & vice-versa ) </b> </div>
+        <form id="con">
+            <table>
+                <tr>
+                    <td colspan="3"><input type="number" id="result"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="    Clear    " onclick="clr()" id="convo" /> </td>
+                    <td><input type="button" value="  Convert  " onclick="convert()" id="convo" /> </td>
+                    <td><input type="button" value="  Reverse  " onclick="reverse()" id="convo" /></td>
+                </tr>
+                
+            </table>
+        </form>
+
+      
+
+
+        <br><br> <br>  
+
+        <!-- NOW, Build in objects -->
+        <h2> Built-In Objects </h2>
+        <p id="user1"> </p>
+        <br>
+       
+        <h4>Click the following to see the results of min and max value </h4>
+        <form>
+            <input type="button" value="Click Me for max" onclick="this.innerHTML = showmax()" />
+            <p id="max"></p>
+            <br>
+            <input type="button" value="Click Me for min" onclick= "showmin()" />
+            <p id="min" ></p>
+         </form>
+
+         <br>
+         <p id="zero">Division by zero generates Infinity;</p>
+         <p id="infinity"></p>
+         <br>
+
+         <p id="len">The length property returns the length of a string:</p>
+         <input type="text" id="inputlen"  />
+         <input type="button" id="inputlen" value="Get length" onclick="getlen()"/>
+         <br> <br>
+         
+         <p id="da">The getMonth(), getData(), getFullYear method returns the date, month, year of the today.</p>
+         <p id="Date"></p>
+        <br>         
+         <p id="len" >Math.PI returns the pi value</p>
+        <p id="mathpi"></p>
+        <br>
+        <p id="len"> Some more math objects </p>
+         <p id=math> </p>
+
+         <br>
+         <p id="len">Click the button to the absolute value of -7.25</p>​
+        <button onclick="funcabs()">Try it</button>
+​         <p id="abs"></p>
+         <br>
+         
+        <p id="len">Math.log2() returns the base 2 logarithm of a number 1000 .</p>
+        <p id="log"></p>
+
+        <br>
+        <p id="len"> Window Objects </p>
+         <p id="prompt"> </p>
+
+         <br>
+         <p id="len">Click the button to display a confirm box for confirmation</p>
+
+        <button onclick="funcconfirm()">Try it</button>
+
+
+
+
+
+
+        <!--JavaScript Starts-->
+        <script>
+            var person = {
+              firstName : "KUNAL",   
+              lastName  : "JANGID",
+              id     :  018,
+              fullName : function() 
+              {
+                return this.firstName + " " + this.lastName;
+              }
+            };
+
+            document.getElementById("demo").innerHTML = person.fullName() + " (Add first and last name by user defined)" ;
+
+            document.getElementById("demo1").innerHTML = person.fullName + "<br><br>Access the fullName property, without (), it will return the function definition.<br>";
+            person.name = function() 
+            {
+              return this.firstName + " " + this.lastName;
+            };
+    
+            document.getElementById("dem").innerHTML ="My Name is " + person.name() + " (Combination of user defined & Built-In)";
+
+            function funcdate()
+            {
+                var d = new Date();
+                document.getElementById("date").innerHTML = d;
+            }   
+            
+
+            var money = new Object();
+            money.USD="1";
+            money.Rupee="74.61";
+            money.count="0";
+
+            function evalusdtor(x)
+            {
+                let z=x*money.Rupee; 
+                return z;
+            }
+            function evalrtousd(x)
+            {
+                let z=x/(money.Rupee);
+                return z;
+            }
+            function convert()
+    		{
+	    		let x = document.getElementById("result").value
+                let y=0;
+                if(money.count%2==0)
+                    y = evalusdtor(x)
+                else
+                   y = evalrtousd(x)
+	
+                document.getElementById("result").value = y
+	    	}
+
+            function reverse()
+            {
+                money.count+=1;
+            }
+            function clr()
+	    	{
+		    	document.getElementById("result").value = ""
+    		}
+
+
+            var message = "Hello world!";
+            var x = message.toUpperCase();0
+            document.getElementById("user1").innerHTML = x + " (Built-In UpperCase)";
+
+            function showmax()
+            {
+               var val = Number.MAX_VALUE;             
+//               document.writeln("Value of Number.MAX_VALUE : " + val );
+               document.getElementById("max").innerHTML = "Value of Number.MAX_VALUE : " + val ;
+            }
+            function showmin()
+            {
+               var val = Number.MIN_VALUE;
+               document.getElementById("min").innerHTML = "Value of Number.MIN_VALUE : " + val;
+            }
+
+            var x = 50/0;
+            var y = -50/0;
+            document.getElementById("infinity").innerHTML = "50/0 = "+ x + "<br> -50/0 = " + y;
+    
+            function getlen()
+            {
+                let x = document.getElementById("inputlen").value
+                let y = x.length;
+                document.getElementById("inputlen").value = y
+            }
+
+            var y = new Date();
+            document.getElementById("Date").innerHTML =  y.getDate() +"-" + (y.getMonth() + 1)  + "-"+ y.getFullYear();
+
+            document.getElementById("mathpi").innerHTML = "<p><b>Math.PI:</b> " + Math.PI + "</p>" ;
+
+            document.getElementById("math").innerHTML = 
+                    "<p><b>Math.E:</b> " + Math.E + "</p>" +
+                    "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+                    "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+                    "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+                    "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+                    "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+                    "<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+ 
+            function funcabs() 
+            {
+                document.getElementById("abs").innerHTML = Math.abs(-7.25);
+            }
+
+            document.getElementById("log").innerHTML = Math.log2(8);
+
+
+            name = prompt("What is your name?  ", "");
+            document.getElementById("prompt").innerHTML = name;
+
+            function funcconfirm() 
+            {
+              confirm("This is Confirmed.");
+            }
+
+            //Alert window object
+            alert("Page is loaded successfully \n (Alert)");
+
+        </script>
+    
+    </body>
+
+</html>

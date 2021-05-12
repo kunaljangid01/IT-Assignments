@@ -1,0 +1,58 @@
+.myDiv {
+    background-color: lightslategray;
+    text-align: center;
+    font-weight: bold;
+    font-family:cursive ;
+    font-size: 0px;
+    position: fixed;
+    overflow: hidden;
+      top: 0;
+     width: 100%;   
+  }
+
+  .myDiv h1
+  {
+    padding: 0px 0px;
+    
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+  .myDiv h1:hover
+  {
+    background: #ddd;
+    color: black;
+  }
+
+body
+{
+    color:aliceblue;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 40px;
+}
+.name
+{
+    text-align: center;
+    font-size: 70px;
+}
+
+i
+{
+    font-size: 25px;
+}
+
+  
+
+img
+{
+    width: 500px;
+    height: 500px;
+    margin: 0px 400px;
+    
+}
